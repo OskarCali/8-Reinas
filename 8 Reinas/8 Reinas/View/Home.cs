@@ -70,7 +70,26 @@ namespace _8_Reinas.View
 
         private void ToolStripBtnNextStep_Click(object sender, EventArgs e)
         {
+            int? mejor = controller.paso(Dato, this);
 
+            if (mejor != null)
+            {
+                toolStripBtnNextStep.Enabled = false;
+                toolStripBtnNextIteration.Enabled = false;
+
+                individuoDataGridView.Rows[(int)mejor].Selected = true;
+                individuoDataGridView.CurrentCell = individuoDataGridView.Rows[(int)mejor].Cells[0];
+                individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
+
+                toolStripBtnComplete.Enabled = true;
+                toolStripBtnSteps.Enabled = true;
+                toolStripBtnViewChess.Enabled = true;
+
+                MessageBox.Show("El mejor individuo es el: " + (mejor + 1), "SOLUCION", MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
+
+                controller.abrirTablero(this);
+            }
         }
 
         private void ToolStripBtnNextIteration_Click(object sender, EventArgs e)
@@ -79,6 +98,7 @@ namespace _8_Reinas.View
 
             if (mejor != null)
             {
+                toolStripBtnNextStep.Enabled = false;
                 toolStripBtnNextIteration.Enabled = false;
 
                 individuoDataGridView.Rows[(int) mejor].Selected = true;
