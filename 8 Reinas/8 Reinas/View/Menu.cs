@@ -24,11 +24,16 @@ namespace _8_Reinas
             ControllerFunction controller = new ControllerFunction();
 
             formHome home = new formHome();
-            home.Dato = controller.datos(Convert.ToInt32(poblacionNumUD.ToString()), Convert.ToInt32(iteracionesNumUD.ToString()), Convert.ToDecimal(probCruceNumUD.ToString()), Convert.ToDecimal(probMutacionNumUD.ToString()));
+            home.Dato = controller.datos(Convert.ToInt32(poblacionNumUD.Value), Convert.ToInt32(iteracionesNumUD.Value), Convert.ToDecimal(probCruceNumUD.Value), Convert.ToDecimal(probMutacionNumUD.Value));
 
             Hide();
             home.ShowDialog(this);
             Show();
+        }
+
+        private void PicBxAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desarrollado por:\n\tOskar Cali\n\tCamilo Emmanuel Hernandez Rosales", "ABOUT", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
