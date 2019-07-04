@@ -114,7 +114,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void cruce(decimal pCruce, formHome home)
+        public void cruce(decimal pCruce, formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -173,7 +173,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void mutacion(decimal pMutacion, formHome home)
+        public void mutacion(decimal pMutacion, formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -204,7 +204,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void mejor(formHome home)
+        public void mejor(formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -242,7 +242,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void nacimiento(formHome home)
+        public void nacimiento(formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -262,7 +262,7 @@ namespace _8_Reinas.Function
             _Mejores.Clear();
         }
 
-        private void actualizar(formHome home)
+        public void actualizar(formHome home)
         {
             home.individuoBindingSource.DataSource = _Individuos;
             home.individuoDataGridView.Update();
