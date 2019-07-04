@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHome));
             System.Windows.Forms.Label fitnessLbl;
             System.Windows.Forms.Label numLbl;
             System.Windows.Forms.Label r1Lbl;
@@ -40,23 +39,15 @@
             System.Windows.Forms.Label r6Lbl;
             System.Windows.Forms.Label r7Lbl;
             System.Windows.Forms.Label r8Lbl;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHome));
             this.lblTitle = new System.Windows.Forms.Label();
             this.toolStripCont = new System.Windows.Forms.ToolStripContainer();
             this.stStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.stStripLblIteration = new System.Windows.Forms.ToolStripStatusLabel();
             this.stStripProgBarIteration = new System.Windows.Forms.ToolStripProgressBar();
             this.stStripLblStep = new System.Windows.Forms.ToolStripStatusLabel();
             this.stStripProgBarStep = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripBtnComplete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnSteps = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnNextStep = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNextIteration = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnViewChess = new System.Windows.Forms.ToolStripButton();
             this.splitCont = new System.Windows.Forms.SplitContainer();
-            this.individuoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.individuoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +59,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.individuoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpBxResult = new System.Windows.Forms.GroupBox();
             this.fitnessTxtBx = new System.Windows.Forms.TextBox();
             this.numTxtBx = new System.Windows.Forms.TextBox();
@@ -79,6 +71,14 @@
             this.r6TxtBx = new System.Windows.Forms.TextBox();
             this.r7TxtBx = new System.Windows.Forms.TextBox();
             this.r8TxtBx = new System.Windows.Forms.TextBox();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripBtnComplete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnSteps = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnNextStep = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNextIteration = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnViewChess = new System.Windows.Forms.ToolStripButton();
             fitnessLbl = new System.Windows.Forms.Label();
             numLbl = new System.Windows.Forms.Label();
             r1Lbl = new System.Windows.Forms.Label();
@@ -94,15 +94,115 @@
             this.toolStripCont.TopToolStripPanel.SuspendLayout();
             this.toolStripCont.SuspendLayout();
             this.stStrip.SuspendLayout();
-            this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitCont)).BeginInit();
             this.splitCont.Panel1.SuspendLayout();
             this.splitCont.Panel2.SuspendLayout();
             this.splitCont.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.individuoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).BeginInit();
             this.grpBxResult.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // fitnessLbl
+            // 
+            fitnessLbl.AutoSize = true;
+            fitnessLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            fitnessLbl.Location = new System.Drawing.Point(20, 49);
+            fitnessLbl.Name = "fitnessLbl";
+            fitnessLbl.Size = new System.Drawing.Size(66, 21);
+            fitnessLbl.TabIndex = 0;
+            fitnessLbl.Text = "Fitness:";
+            // 
+            // numLbl
+            // 
+            numLbl.AutoSize = true;
+            numLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            numLbl.Location = new System.Drawing.Point(20, 84);
+            numLbl.Name = "numLbl";
+            numLbl.Size = new System.Drawing.Size(48, 21);
+            numLbl.TabIndex = 2;
+            numLbl.Text = "Num:";
+            // 
+            // r1Lbl
+            // 
+            r1Lbl.AutoSize = true;
+            r1Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r1Lbl.Location = new System.Drawing.Point(52, 119);
+            r1Lbl.Name = "r1Lbl";
+            r1Lbl.Size = new System.Drawing.Size(34, 21);
+            r1Lbl.TabIndex = 4;
+            r1Lbl.Text = "R1:";
+            // 
+            // r2Lbl
+            // 
+            r2Lbl.AutoSize = true;
+            r2Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r2Lbl.Location = new System.Drawing.Point(52, 154);
+            r2Lbl.Name = "r2Lbl";
+            r2Lbl.Size = new System.Drawing.Size(34, 21);
+            r2Lbl.TabIndex = 6;
+            r2Lbl.Text = "R2:";
+            // 
+            // r3Lbl
+            // 
+            r3Lbl.AutoSize = true;
+            r3Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r3Lbl.Location = new System.Drawing.Point(52, 189);
+            r3Lbl.Name = "r3Lbl";
+            r3Lbl.Size = new System.Drawing.Size(34, 21);
+            r3Lbl.TabIndex = 8;
+            r3Lbl.Text = "R3:";
+            // 
+            // r4Lbl
+            // 
+            r4Lbl.AutoSize = true;
+            r4Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r4Lbl.Location = new System.Drawing.Point(52, 224);
+            r4Lbl.Name = "r4Lbl";
+            r4Lbl.Size = new System.Drawing.Size(34, 21);
+            r4Lbl.TabIndex = 10;
+            r4Lbl.Text = "R4:";
+            // 
+            // r5Lbl
+            // 
+            r5Lbl.AutoSize = true;
+            r5Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r5Lbl.Location = new System.Drawing.Point(52, 259);
+            r5Lbl.Name = "r5Lbl";
+            r5Lbl.Size = new System.Drawing.Size(34, 21);
+            r5Lbl.TabIndex = 12;
+            r5Lbl.Text = "R5:";
+            // 
+            // r6Lbl
+            // 
+            r6Lbl.AutoSize = true;
+            r6Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r6Lbl.Location = new System.Drawing.Point(52, 294);
+            r6Lbl.Name = "r6Lbl";
+            r6Lbl.Size = new System.Drawing.Size(34, 21);
+            r6Lbl.TabIndex = 14;
+            r6Lbl.Text = "R6:";
+            // 
+            // r7Lbl
+            // 
+            r7Lbl.AutoSize = true;
+            r7Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r7Lbl.Location = new System.Drawing.Point(52, 329);
+            r7Lbl.Name = "r7Lbl";
+            r7Lbl.Size = new System.Drawing.Size(34, 21);
+            r7Lbl.TabIndex = 16;
+            r7Lbl.Text = "R7:";
+            // 
+            // r8Lbl
+            // 
+            r8Lbl.AutoSize = true;
+            r8Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
+            r8Lbl.Location = new System.Drawing.Point(52, 364);
+            r8Lbl.Name = "r8Lbl";
+            r8Lbl.Size = new System.Drawing.Size(34, 21);
+            r8Lbl.TabIndex = 18;
+            r8Lbl.Text = "R8:";
             // 
             // lblTitle
             // 
@@ -151,24 +251,6 @@
             this.stStrip.Size = new System.Drawing.Size(928, 25);
             this.stStrip.TabIndex = 0;
             // 
-            // toolStrip
-            // 
-            this.toolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBtnComplete,
-            this.toolStripBtnSteps,
-            this.toolStripSeparator1,
-            this.toolStripBtnNextStep,
-            this.toolStripBtnNextIteration,
-            this.toolStripSeparator2,
-            this.toolStripBtnViewChess});
-            this.toolStrip.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(135, 27);
-            this.toolStrip.TabIndex = 0;
-            // 
             // stStripLblIteration
             // 
             this.stStripLblIteration.Name = "stStripLblIteration";
@@ -184,7 +266,7 @@
             // stStripLblStep
             // 
             this.stStripLblStep.Name = "stStripLblStep";
-            this.stStripLblStep.Size = new System.Drawing.Size(552, 20);
+            this.stStripLblStep.Size = new System.Drawing.Size(513, 20);
             this.stStripLblStep.Spring = true;
             this.stStripLblStep.Text = "Individuo x/n";
             this.stStripLblStep.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,62 +276,6 @@
             this.stStripProgBarStep.Name = "stStripProgBarStep";
             this.stStripProgBarStep.Size = new System.Drawing.Size(150, 19);
             this.stStripProgBarStep.Step = 1;
-            // 
-            // toolStripBtnComplete
-            // 
-            this.toolStripBtnComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnComplete.Image")));
-            this.toolStripBtnComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnComplete.Name = "toolStripBtnComplete";
-            this.toolStripBtnComplete.Size = new System.Drawing.Size(24, 24);
-            this.toolStripBtnComplete.Text = "Completo";
-            this.toolStripBtnComplete.ToolTipText = "Completo";
-            // 
-            // toolStripBtnSteps
-            // 
-            this.toolStripBtnSteps.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnSteps.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSteps.Image")));
-            this.toolStripBtnSteps.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnSteps.Name = "toolStripBtnSteps";
-            this.toolStripBtnSteps.Size = new System.Drawing.Size(24, 24);
-            this.toolStripBtnSteps.Text = "Paso a paso";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripBtnNextStep
-            // 
-            this.toolStripBtnNextStep.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnNextStep.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNextStep.Image")));
-            this.toolStripBtnNextStep.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNextStep.Name = "toolStripBtnNextStep";
-            this.toolStripBtnNextStep.Size = new System.Drawing.Size(24, 24);
-            this.toolStripBtnNextStep.Text = "Siguiente paso";
-            // 
-            // toolStripBtnNextIteration
-            // 
-            this.toolStripBtnNextIteration.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnNextIteration.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNextIteration.Image")));
-            this.toolStripBtnNextIteration.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNextIteration.Name = "toolStripBtnNextIteration";
-            this.toolStripBtnNextIteration.Size = new System.Drawing.Size(24, 24);
-            this.toolStripBtnNextIteration.Text = "Siguiente iteracion";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripBtnViewChess
-            // 
-            this.toolStripBtnViewChess.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnViewChess.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnViewChess.Image")));
-            this.toolStripBtnViewChess.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnViewChess.Name = "toolStripBtnViewChess";
-            this.toolStripBtnViewChess.Size = new System.Drawing.Size(24, 24);
-            this.toolStripBtnViewChess.Text = "Ver tablero";
             // 
             // splitCont
             // 
@@ -268,10 +294,6 @@
             this.splitCont.Size = new System.Drawing.Size(928, 480);
             this.splitCont.SplitterDistance = 650;
             this.splitCont.TabIndex = 0;
-            // 
-            // individuoBindingSource
-            // 
-            this.individuoBindingSource.DataSource = typeof(_8_Reinas.Model.Individuo);
             // 
             // individuoDataGridView
             // 
@@ -373,6 +395,10 @@
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
+            // individuoBindingSource
+            // 
+            this.individuoBindingSource.DataSource = typeof(_8_Reinas.Model.Individuo);
+            // 
             // grpBxResult
             // 
             this.grpBxResult.Controls.Add(fitnessLbl);
@@ -404,16 +430,6 @@
             this.grpBxResult.TabStop = false;
             this.grpBxResult.Text = "RESULTADO";
             // 
-            // fitnessLbl
-            // 
-            fitnessLbl.AutoSize = true;
-            fitnessLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            fitnessLbl.Location = new System.Drawing.Point(20, 49);
-            fitnessLbl.Name = "fitnessLbl";
-            fitnessLbl.Size = new System.Drawing.Size(66, 21);
-            fitnessLbl.TabIndex = 0;
-            fitnessLbl.Text = "Fitness:";
-            // 
             // fitnessTxtBx
             // 
             this.fitnessTxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "Fitness", true));
@@ -423,16 +439,6 @@
             this.fitnessTxtBx.ReadOnly = true;
             this.fitnessTxtBx.Size = new System.Drawing.Size(100, 24);
             this.fitnessTxtBx.TabIndex = 1;
-            // 
-            // numLbl
-            // 
-            numLbl.AutoSize = true;
-            numLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            numLbl.Location = new System.Drawing.Point(20, 84);
-            numLbl.Name = "numLbl";
-            numLbl.Size = new System.Drawing.Size(48, 21);
-            numLbl.TabIndex = 2;
-            numLbl.Text = "Num:";
             // 
             // numTxtBx
             // 
@@ -444,16 +450,6 @@
             this.numTxtBx.Size = new System.Drawing.Size(100, 24);
             this.numTxtBx.TabIndex = 3;
             // 
-            // r1Lbl
-            // 
-            r1Lbl.AutoSize = true;
-            r1Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r1Lbl.Location = new System.Drawing.Point(52, 119);
-            r1Lbl.Name = "r1Lbl";
-            r1Lbl.Size = new System.Drawing.Size(34, 21);
-            r1Lbl.TabIndex = 4;
-            r1Lbl.Text = "R1:";
-            // 
             // r1TxtBx
             // 
             this.r1TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R1", true));
@@ -463,16 +459,6 @@
             this.r1TxtBx.ReadOnly = true;
             this.r1TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r1TxtBx.TabIndex = 5;
-            // 
-            // r2Lbl
-            // 
-            r2Lbl.AutoSize = true;
-            r2Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r2Lbl.Location = new System.Drawing.Point(52, 154);
-            r2Lbl.Name = "r2Lbl";
-            r2Lbl.Size = new System.Drawing.Size(34, 21);
-            r2Lbl.TabIndex = 6;
-            r2Lbl.Text = "R2:";
             // 
             // r2TxtBx
             // 
@@ -484,16 +470,6 @@
             this.r2TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r2TxtBx.TabIndex = 7;
             // 
-            // r3Lbl
-            // 
-            r3Lbl.AutoSize = true;
-            r3Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r3Lbl.Location = new System.Drawing.Point(52, 189);
-            r3Lbl.Name = "r3Lbl";
-            r3Lbl.Size = new System.Drawing.Size(34, 21);
-            r3Lbl.TabIndex = 8;
-            r3Lbl.Text = "R3:";
-            // 
             // r3TxtBx
             // 
             this.r3TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R3", true));
@@ -503,16 +479,6 @@
             this.r3TxtBx.ReadOnly = true;
             this.r3TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r3TxtBx.TabIndex = 9;
-            // 
-            // r4Lbl
-            // 
-            r4Lbl.AutoSize = true;
-            r4Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r4Lbl.Location = new System.Drawing.Point(52, 224);
-            r4Lbl.Name = "r4Lbl";
-            r4Lbl.Size = new System.Drawing.Size(34, 21);
-            r4Lbl.TabIndex = 10;
-            r4Lbl.Text = "R4:";
             // 
             // r4TxtBx
             // 
@@ -524,16 +490,6 @@
             this.r4TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r4TxtBx.TabIndex = 11;
             // 
-            // r5Lbl
-            // 
-            r5Lbl.AutoSize = true;
-            r5Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r5Lbl.Location = new System.Drawing.Point(52, 259);
-            r5Lbl.Name = "r5Lbl";
-            r5Lbl.Size = new System.Drawing.Size(34, 21);
-            r5Lbl.TabIndex = 12;
-            r5Lbl.Text = "R5:";
-            // 
             // r5TxtBx
             // 
             this.r5TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R5", true));
@@ -543,16 +499,6 @@
             this.r5TxtBx.ReadOnly = true;
             this.r5TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r5TxtBx.TabIndex = 13;
-            // 
-            // r6Lbl
-            // 
-            r6Lbl.AutoSize = true;
-            r6Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r6Lbl.Location = new System.Drawing.Point(52, 294);
-            r6Lbl.Name = "r6Lbl";
-            r6Lbl.Size = new System.Drawing.Size(34, 21);
-            r6Lbl.TabIndex = 14;
-            r6Lbl.Text = "R6:";
             // 
             // r6TxtBx
             // 
@@ -564,16 +510,6 @@
             this.r6TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r6TxtBx.TabIndex = 15;
             // 
-            // r7Lbl
-            // 
-            r7Lbl.AutoSize = true;
-            r7Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r7Lbl.Location = new System.Drawing.Point(52, 329);
-            r7Lbl.Name = "r7Lbl";
-            r7Lbl.Size = new System.Drawing.Size(34, 21);
-            r7Lbl.TabIndex = 16;
-            r7Lbl.Text = "R7:";
-            // 
             // r7TxtBx
             // 
             this.r7TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R7", true));
@@ -584,16 +520,6 @@
             this.r7TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r7TxtBx.TabIndex = 17;
             // 
-            // r8Lbl
-            // 
-            r8Lbl.AutoSize = true;
-            r8Lbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F);
-            r8Lbl.Location = new System.Drawing.Point(52, 364);
-            r8Lbl.Name = "r8Lbl";
-            r8Lbl.Size = new System.Drawing.Size(34, 21);
-            r8Lbl.TabIndex = 18;
-            r8Lbl.Text = "R8:";
-            // 
             // r8TxtBx
             // 
             this.r8TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R8", true));
@@ -603,6 +529,81 @@
             this.r8TxtBx.ReadOnly = true;
             this.r8TxtBx.Size = new System.Drawing.Size(100, 24);
             this.r8TxtBx.TabIndex = 19;
+            // 
+            // toolStrip
+            // 
+            this.toolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripBtnComplete,
+            this.toolStripBtnSteps,
+            this.toolStripSeparator1,
+            this.toolStripBtnNextStep,
+            this.toolStripBtnNextIteration,
+            this.toolStripSeparator2,
+            this.toolStripBtnViewChess});
+            this.toolStrip.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Size = new System.Drawing.Size(135, 27);
+            this.toolStrip.TabIndex = 0;
+            // 
+            // toolStripBtnComplete
+            // 
+            this.toolStripBtnComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnComplete.Image")));
+            this.toolStripBtnComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnComplete.Name = "toolStripBtnComplete";
+            this.toolStripBtnComplete.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnComplete.Text = "Completo";
+            this.toolStripBtnComplete.ToolTipText = "Completo";
+            this.toolStripBtnComplete.Click += new System.EventHandler(this.ToolStripBtnComplete_Click);
+            // 
+            // toolStripBtnSteps
+            // 
+            this.toolStripBtnSteps.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnSteps.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSteps.Image")));
+            this.toolStripBtnSteps.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnSteps.Name = "toolStripBtnSteps";
+            this.toolStripBtnSteps.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnSteps.Text = "Paso a paso";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripBtnNextStep
+            // 
+            this.toolStripBtnNextStep.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnNextStep.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNextStep.Image")));
+            this.toolStripBtnNextStep.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNextStep.Name = "toolStripBtnNextStep";
+            this.toolStripBtnNextStep.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnNextStep.Text = "Siguiente paso";
+            // 
+            // toolStripBtnNextIteration
+            // 
+            this.toolStripBtnNextIteration.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnNextIteration.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNextIteration.Image")));
+            this.toolStripBtnNextIteration.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNextIteration.Name = "toolStripBtnNextIteration";
+            this.toolStripBtnNextIteration.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnNextIteration.Text = "Siguiente iteracion";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripBtnViewChess
+            // 
+            this.toolStripBtnViewChess.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnViewChess.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnViewChess.Image")));
+            this.toolStripBtnViewChess.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnViewChess.Name = "toolStripBtnViewChess";
+            this.toolStripBtnViewChess.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnViewChess.Text = "Ver tablero";
             // 
             // formHome
             // 
@@ -624,16 +625,16 @@
             this.toolStripCont.PerformLayout();
             this.stStrip.ResumeLayout(false);
             this.stStrip.PerformLayout();
-            this.toolStrip.ResumeLayout(false);
-            this.toolStrip.PerformLayout();
             this.splitCont.Panel1.ResumeLayout(false);
             this.splitCont.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitCont)).EndInit();
             this.splitCont.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.individuoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).EndInit();
             this.grpBxResult.ResumeLayout(false);
             this.grpBxResult.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -643,10 +644,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ToolStripContainer toolStripCont;
         private System.Windows.Forms.StatusStrip stStrip;
-        private System.Windows.Forms.ToolStripStatusLabel stStripLblIteration;
-        private System.Windows.Forms.ToolStripProgressBar stStripProgBarIteration;
-        private System.Windows.Forms.ToolStripStatusLabel stStripLblStep;
-        private System.Windows.Forms.ToolStripProgressBar stStripProgBarStep;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton toolStripBtnComplete;
         private System.Windows.Forms.ToolStripButton toolStripBtnSteps;
@@ -656,7 +653,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripBtnViewChess;
         private System.Windows.Forms.SplitContainer splitCont;
-        private System.Windows.Forms.DataGridView individuoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -667,7 +663,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.BindingSource individuoBindingSource;
         private System.Windows.Forms.GroupBox grpBxResult;
         private System.Windows.Forms.TextBox fitnessTxtBx;
         private System.Windows.Forms.TextBox numTxtBx;
@@ -679,5 +674,11 @@
         private System.Windows.Forms.TextBox r6TxtBx;
         private System.Windows.Forms.TextBox r7TxtBx;
         private System.Windows.Forms.TextBox r8TxtBx;
+        protected internal System.Windows.Forms.DataGridView individuoDataGridView;
+        protected internal System.Windows.Forms.ToolStripStatusLabel stStripLblIteration;
+        protected internal System.Windows.Forms.ToolStripProgressBar stStripProgBarIteration;
+        protected internal System.Windows.Forms.ToolStripStatusLabel stStripLblStep;
+        protected internal System.Windows.Forms.ToolStripProgressBar stStripProgBarStep;
+        protected internal System.Windows.Forms.BindingSource individuoBindingSource;
     }
 }
