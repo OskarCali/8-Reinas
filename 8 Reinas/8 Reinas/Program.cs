@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _8_Reinas.View;
 
 namespace _8_Reinas
 {
@@ -16,7 +17,7 @@ namespace _8_Reinas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new formMenu());
         }
     }
 }
