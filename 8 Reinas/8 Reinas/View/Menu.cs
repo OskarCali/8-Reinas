@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _8_Reinas
 {
-    public partial class Menu : Form
+    public partial class formMenu : Form
     {
-        public Menu()
+        public formMenu()
         {
             InitializeComponent();
         }
