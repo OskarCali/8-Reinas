@@ -49,12 +49,14 @@ namespace _8_Reinas.Function
             actualizar(home);
         }
 
-        public void evaluar(formHome home)
+        public void evaluar(formHome home, bool isAll)
         {
+            List<Individuo> aux = isAll ? _Individuos : _Hijos;
+
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = _Individuos.Count;
 
-            foreach (var individuo in _Individuos)
+            foreach (var individuo in aux)
             {
                 home.stStripLblStep.Text = "Evaluando individuo " + individuo.Num + "/" + _Individuos.Count;
                 Application.DoEvents();
@@ -260,6 +262,21 @@ namespace _8_Reinas.Function
             _Hijos.Clear();
             _Padres.Clear();
             _Mejores.Clear();
+        }
+
+        public int apto(formHome home)
+        {
+            int apto = 0;
+
+            foreach (var individuo in _Individuos)
+            {
+                if (!(_Individuos[apto].Fitness < individuo.Fitness))
+                {
+                    apto = individuo.Num - 1;
+                }
+            }
+
+            return apto;
         }
 
         public void actualizar(formHome home)
