@@ -249,10 +249,11 @@ namespace _8_Reinas
             this.picBxAbout.Image = global::_8_Reinas.Properties.Resources.Autor;
             this.picBxAbout.Location = new System.Drawing.Point(9, 278);
             this.picBxAbout.Name = "picBxAbout";
-            this.picBxAbout.Size = new System.Drawing.Size(40, 55);
+            this.picBxAbout.Size = new System.Drawing.Size(45, 55);
             this.picBxAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBxAbout.TabIndex = 3;
             this.picBxAbout.TabStop = false;
+            this.picBxAbout.Click += new System.EventHandler(this.PicBxAbout_Click);
             // 
             // formMenu
             // 
