@@ -135,7 +135,7 @@ namespace _8_Reinas.Controller
 
         public void abrirTablero(formHome home)
         {
-            formTablero tablero = new formTablero();
+            formTablero tablero = new formTablero((home.individuoBindingSource.Current as Individuo).Num);
             tablero.Reinas = (home.individuoBindingSource.Current as Individuo).Reinas;
             tablero.ShowDialog(home);
         }

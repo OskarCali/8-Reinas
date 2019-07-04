@@ -103,7 +103,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\reina.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Autor.png" />
   </ItemGroup>

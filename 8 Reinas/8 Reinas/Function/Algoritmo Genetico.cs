@@ -11,14 +11,20 @@ namespace _8_Reinas.Function
 {
     class Algoritmo_Genetico
     {
-        private List<Individuo> _Individuos { get; set; }
-        private List<Individuo> _Padres { get; set; }
-        private List<Individuo> _Hijos { get; set; }
-        private List<Individuo> _Mejores { get; set; }
+        //private List<Individuo> _Individuos { get; set; }
+        //private List<Individuo> _Padres { get; set; }
+        //private List<Individuo> _Hijos { get; set; }
+        //private List<Individuo> _Mejores { get; set; }
+
+        private List<Individuo> _Individuos = new List<Individuo>();
+        private List<Individuo> _Padres = new List<Individuo>();
+        private List<Individuo> _Hijos = new List<Individuo>();
+        private List<Individuo> _Mejores = new List<Individuo>();
 
         public void llenarPoblacion(int poblacion, formHome home)
         {
             List<int> reinas = new List<int>(8);
+
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = poblacion;
 
