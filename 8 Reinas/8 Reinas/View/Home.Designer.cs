@@ -266,7 +266,7 @@
             // stStripLblStep
             // 
             this.stStripLblStep.Name = "stStripLblStep";
-            this.stStripLblStep.Size = new System.Drawing.Size(513, 20);
+            this.stStripLblStep.Size = new System.Drawing.Size(552, 20);
             this.stStripLblStep.Spring = true;
             this.stStripLblStep.Text = "Individuo x/n";
             this.stStripLblStep.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -616,6 +616,7 @@
             this.Name = "formHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.FormHome_Load);
             this.toolStripCont.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripCont.BottomToolStripPanel.PerformLayout();
             this.toolStripCont.ContentPanel.ResumeLayout(false);

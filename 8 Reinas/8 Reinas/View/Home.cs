@@ -22,16 +22,35 @@ namespace _8_Reinas.View
             InitializeComponent();
         }
 
+        private void FormHome_Load(object sender, EventArgs e)
+        {
+            toolStripBtnNextStep.Enabled = false;
+            toolStripBtnNextIteration.Enabled = false;
+            toolStripBtnViewChess.Enabled = false;
+        }
+
         private void ToolStripBtnComplete_Click(object sender, EventArgs e)
         {
+            toolStripBtnSteps.Enabled = false;
+            toolStripBtnNextStep.Enabled = false;
+            toolStripBtnNextIteration.Enabled = false;
+            toolStripBtnViewChess.Enabled = false;
+
             int mejor = controller.completo(Dato, this);
 
             individuoDataGridView.Rows[mejor].Selected = true;
             individuoDataGridView.CurrentCell = individuoDataGridView.Rows[mejor].Cells[0];
             individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
 
+            toolStripBtnSteps.Enabled = true;
+            toolStripBtnViewChess.Enabled = true;
+
             MessageBox.Show("El mejor individuo es el: " + (mejor + 1), "SOLUCION", MessageBoxButtons.OK,
                 MessageBoxIcon.Asterisk);
+
+            formTablero tablero = new formTablero();
+            tablero.Reinas = (individuoBindingSource.Current as Individuo).Reinas;
+            tablero.ShowDialog(this);
         }
     }
 }
