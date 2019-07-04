@@ -1,4 +1,6 @@
-﻿namespace _8_Reinas
+﻿using System.Windows.Forms;
+
+namespace _8_Reinas
 {
     partial class formMenu
     {
@@ -36,25 +38,65 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMenu));
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpBxDatos = new System.Windows.Forms.GroupBox();
-            this.btnEnter = new System.Windows.Forms.Button();
             this.iteracionesNumUD = new System.Windows.Forms.NumericUpDown();
+            this.datoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.poblacionNumUD = new System.Windows.Forms.NumericUpDown();
             this.probCruceNumUD = new System.Windows.Forms.NumericUpDown();
             this.probMutacionNumUD = new System.Windows.Forms.NumericUpDown();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.picBxAbout = new System.Windows.Forms.PictureBox();
-            this.datoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             iteracionesLbl = new System.Windows.Forms.Label();
             poblacionLbl = new System.Windows.Forms.Label();
             probCruceLbl = new System.Windows.Forms.Label();
             probMutacionLbl = new System.Windows.Forms.Label();
             this.grpBxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionesNumUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poblacionNumUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probCruceNumUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probMutacionNumUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxAbout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iteracionesLbl
+            // 
+            iteracionesLbl.AutoSize = true;
+            iteracionesLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iteracionesLbl.Location = new System.Drawing.Point(25, 40);
+            iteracionesLbl.Name = "iteracionesLbl";
+            iteracionesLbl.Size = new System.Drawing.Size(94, 21);
+            iteracionesLbl.TabIndex = 0;
+            iteracionesLbl.Text = "Iteraciones:";
+            // 
+            // poblacionLbl
+            // 
+            poblacionLbl.AutoSize = true;
+            poblacionLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            poblacionLbl.Location = new System.Drawing.Point(25, 71);
+            poblacionLbl.Name = "poblacionLbl";
+            poblacionLbl.Size = new System.Drawing.Size(85, 21);
+            poblacionLbl.TabIndex = 2;
+            poblacionLbl.Text = "Poblacion:";
+            // 
+            // probCruceLbl
+            // 
+            probCruceLbl.AutoSize = true;
+            probCruceLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            probCruceLbl.Location = new System.Drawing.Point(25, 102);
+            probCruceLbl.Name = "probCruceLbl";
+            probCruceLbl.Size = new System.Drawing.Size(98, 21);
+            probCruceLbl.TabIndex = 4;
+            probCruceLbl.Text = "Prob. Cruce:";
+            // 
+            // probMutacionLbl
+            // 
+            probMutacionLbl.AutoSize = true;
+            probMutacionLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            probMutacionLbl.Location = new System.Drawing.Point(25, 133);
+            probMutacionLbl.Name = "probMutacionLbl";
+            probMutacionLbl.Size = new System.Drawing.Size(123, 21);
+            probMutacionLbl.TabIndex = 6;
+            probMutacionLbl.Text = "Prob. Mutacion:";
             // 
             // lblTitle
             // 
@@ -85,26 +127,6 @@
             this.grpBxDatos.TabStop = false;
             this.grpBxDatos.Text = "DATOS";
             // 
-            // btnEnter
-            // 
-            this.btnEnter.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(149, 278);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(150, 55);
-            this.btnEnter.TabIndex = 2;
-            this.btnEnter.Text = "ACEPTAR";
-            this.btnEnter.UseVisualStyleBackColor = true;
-            // 
-            // iteracionesLbl
-            // 
-            iteracionesLbl.AutoSize = true;
-            iteracionesLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iteracionesLbl.Location = new System.Drawing.Point(25, 40);
-            iteracionesLbl.Name = "iteracionesLbl";
-            iteracionesLbl.Size = new System.Drawing.Size(94, 21);
-            iteracionesLbl.TabIndex = 0;
-            iteracionesLbl.Text = "Iteraciones:";
-            // 
             // iteracionesNumUD
             // 
             this.iteracionesNumUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.datoBindingSource, "Iteraciones", true));
@@ -125,15 +147,9 @@
             0,
             0});
             // 
-            // poblacionLbl
+            // datoBindingSource
             // 
-            poblacionLbl.AutoSize = true;
-            poblacionLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            poblacionLbl.Location = new System.Drawing.Point(25, 71);
-            poblacionLbl.Name = "poblacionLbl";
-            poblacionLbl.Size = new System.Drawing.Size(85, 21);
-            poblacionLbl.TabIndex = 2;
-            poblacionLbl.Text = "Poblacion:";
+            this.datoBindingSource.DataSource = typeof(_8_Reinas.Model.Dato);
             // 
             // poblacionNumUD
             // 
@@ -154,16 +170,6 @@
             0,
             0,
             0});
-            // 
-            // probCruceLbl
-            // 
-            probCruceLbl.AutoSize = true;
-            probCruceLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            probCruceLbl.Location = new System.Drawing.Point(25, 102);
-            probCruceLbl.Name = "probCruceLbl";
-            probCruceLbl.Size = new System.Drawing.Size(98, 21);
-            probCruceLbl.TabIndex = 4;
-            probCruceLbl.Text = "Prob. Cruce:";
             // 
             // probCruceNumUD
             // 
@@ -196,16 +202,6 @@
             0,
             131072});
             // 
-            // probMutacionLbl
-            // 
-            probMutacionLbl.AutoSize = true;
-            probMutacionLbl.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            probMutacionLbl.Location = new System.Drawing.Point(25, 133);
-            probMutacionLbl.Name = "probMutacionLbl";
-            probMutacionLbl.Size = new System.Drawing.Size(123, 21);
-            probMutacionLbl.TabIndex = 6;
-            probMutacionLbl.Text = "Prob. Mutacion:";
-            // 
             // probMutacionNumUD
             // 
             this.probMutacionNumUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.datoBindingSource, "ProbMutacion", true));
@@ -237,6 +233,17 @@
             0,
             131072});
             // 
+            // btnEnter
+            // 
+            this.btnEnter.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.Location = new System.Drawing.Point(149, 278);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(150, 55);
+            this.btnEnter.TabIndex = 2;
+            this.btnEnter.Text = "ACEPTAR";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
+            // 
             // picBxAbout
             // 
             this.picBxAbout.Image = global::_8_Reinas.Properties.Resources.Autor;
@@ -246,10 +253,6 @@
             this.picBxAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBxAbout.TabIndex = 3;
             this.picBxAbout.TabStop = false;
-            // 
-            // datoBindingSource
-            // 
-            this.datoBindingSource.DataSource = typeof(_8_Reinas.Model.Dato);
             // 
             // formMenu
             // 
@@ -268,11 +271,11 @@
             this.grpBxDatos.ResumeLayout(false);
             this.grpBxDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionesNumUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poblacionNumUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.probCruceNumUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.probMutacionNumUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxAbout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
