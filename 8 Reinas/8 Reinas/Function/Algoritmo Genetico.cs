@@ -49,12 +49,14 @@ namespace _8_Reinas.Function
             actualizar(home);
         }
 
-        public void evaluar(formHome home)
+        public void evaluar(formHome home, bool isAll)
         {
+            List<Individuo> aux = isAll ? _Individuos : _Hijos;
+
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = _Individuos.Count;
 
-            foreach (var individuo in _Individuos)
+            foreach (var individuo in aux)
             {
                 home.stStripLblStep.Text = "Evaluando individuo " + individuo.Num + "/" + _Individuos.Count;
                 Application.DoEvents();
@@ -114,7 +116,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void cruce(decimal pCruce, formHome home)
+        public void cruce(decimal pCruce, formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -173,7 +175,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void mutacion(decimal pMutacion, formHome home)
+        public void mutacion(decimal pMutacion, formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -204,7 +206,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void mejor(formHome home)
+        public void mejor(formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -242,7 +244,7 @@ namespace _8_Reinas.Function
             }
         }
 
-        private void nacimiento(formHome home)
+        public void nacimiento(formHome home)
         {
             home.stStripProgBarStep.Value = 0;
             home.stStripProgBarStep.Maximum = 2;
@@ -262,7 +264,22 @@ namespace _8_Reinas.Function
             _Mejores.Clear();
         }
 
-        private void actualizar(formHome home)
+        public int apto(formHome home)
+        {
+            int apto = 0;
+
+            foreach (var individuo in _Individuos)
+            {
+                if (!(_Individuos[apto].Fitness < individuo.Fitness))
+                {
+                    apto = individuo.Num - 1;
+                }
+            }
+
+            return apto;
+        }
+
+        public void actualizar(formHome home)
         {
             home.individuoBindingSource.DataSource = _Individuos;
             home.individuoDataGridView.Update();
