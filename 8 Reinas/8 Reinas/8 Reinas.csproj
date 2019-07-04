@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ControllerFunction.cs" />
+    <Compile Include="Function\Algoritmo Genetico.cs" />
     <Compile Include="Model\Ajedrez.cs" />
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
@@ -101,10 +103,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Function\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Autor.png" />
   </ItemGroup>

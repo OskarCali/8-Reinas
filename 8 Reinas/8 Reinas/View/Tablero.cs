@@ -12,6 +12,8 @@ namespace _8_Reinas.View
 {
     public partial class formTablero : Form
     {
+        public List<int> Reinas { get; set; }
+
         public formTablero()
         {
             InitializeComponent();
