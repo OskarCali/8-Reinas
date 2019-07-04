@@ -14,9 +14,10 @@ namespace _8_Reinas.View
     {
         public List<int> Reinas { get; set; }
 
-        public formTablero()
+        public formTablero(int num)
         {
             InitializeComponent();
+            Text += " - " + num;
         }
 
         private void FormTablero_Load(object sender, EventArgs e)
@@ -38,9 +39,15 @@ namespace _8_Reinas.View
                         btn.BackColor = x % 2 == 0 ? Color.White : Color.LightSlateGray;
                     }
 
+                    if (Reinas[y] == (x+1))
+                    {
+                        btn.BackgroundImage = new Bitmap(_8_Reinas.Properties.Resources.reina);
+                        btn.BackgroundImageLayout = ImageLayout.Stretch;
+                    }
+
                     Controls.Add(btn);
 
-                    Width = btn.Right + 25;
+                    Width = btn.Right + 20;
                     Height = btn.Bottom + 40;
                 }
             }
