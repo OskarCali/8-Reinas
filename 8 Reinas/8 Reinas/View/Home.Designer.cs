@@ -49,17 +49,6 @@
             this.stStripProgBarStep = new System.Windows.Forms.ToolStripProgressBar();
             this.splitCont = new System.Windows.Forms.SplitContainer();
             this.individuoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.individuoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpBxResult = new System.Windows.Forms.GroupBox();
             this.fitnessTxtBx = new System.Windows.Forms.TextBox();
             this.numTxtBx = new System.Windows.Forms.TextBox();
@@ -79,6 +68,18 @@
             this.toolStripBtnNextIteration = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnViewChess = new System.Windows.Forms.ToolStripButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.individuoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.solucionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             fitnessLbl = new System.Windows.Forms.Label();
             numLbl = new System.Windows.Forms.Label();
             r1Lbl = new System.Windows.Forms.Label();
@@ -99,9 +100,10 @@
             this.splitCont.Panel2.SuspendLayout();
             this.splitCont.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.individuoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).BeginInit();
             this.grpBxResult.SuspendLayout();
             this.toolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.solucionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fitnessLbl
@@ -292,7 +294,7 @@
             this.splitCont.Panel2.Controls.Add(this.grpBxResult);
             this.splitCont.Panel2MinSize = 250;
             this.splitCont.Size = new System.Drawing.Size(928, 480);
-            this.splitCont.SplitterDistance = 650;
+            this.splitCont.SplitterDistance = 674;
             this.splitCont.TabIndex = 0;
             // 
             // individuoDataGridView
@@ -300,7 +302,7 @@
             this.individuoDataGridView.AllowUserToAddRows = false;
             this.individuoDataGridView.AllowUserToDeleteRows = false;
             this.individuoDataGridView.AutoGenerateColumns = false;
-            this.individuoDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.individuoDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.individuoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.individuoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -322,82 +324,8 @@
             this.individuoDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.individuoDataGridView.RowTemplate.Height = 24;
             this.individuoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.individuoDataGridView.Size = new System.Drawing.Size(650, 480);
+            this.individuoDataGridView.Size = new System.Drawing.Size(674, 480);
             this.individuoDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Num";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Num";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "R1";
-            this.dataGridViewTextBoxColumn2.HeaderText = "R1";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "R2";
-            this.dataGridViewTextBoxColumn3.HeaderText = "R2";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "R3";
-            this.dataGridViewTextBoxColumn4.HeaderText = "R3";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "R4";
-            this.dataGridViewTextBoxColumn5.HeaderText = "R4";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "R5";
-            this.dataGridViewTextBoxColumn6.HeaderText = "R5";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "R6";
-            this.dataGridViewTextBoxColumn7.HeaderText = "R6";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "R7";
-            this.dataGridViewTextBoxColumn8.HeaderText = "R7";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "R8";
-            this.dataGridViewTextBoxColumn9.HeaderText = "R8";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Fitness";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Fitness";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // individuoBindingSource
-            // 
-            this.individuoBindingSource.DataSource = typeof(_8_Reinas.Model.Individuo);
             // 
             // grpBxResult
             // 
@@ -425,14 +353,14 @@
             this.grpBxResult.Font = new System.Drawing.Font("Rockwell", 10.8F);
             this.grpBxResult.Location = new System.Drawing.Point(0, 0);
             this.grpBxResult.Name = "grpBxResult";
-            this.grpBxResult.Size = new System.Drawing.Size(274, 480);
+            this.grpBxResult.Size = new System.Drawing.Size(250, 480);
             this.grpBxResult.TabIndex = 0;
             this.grpBxResult.TabStop = false;
             this.grpBxResult.Text = "RESULTADO";
             // 
             // fitnessTxtBx
             // 
-            this.fitnessTxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "Fitness", true));
+            this.fitnessTxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "Fitness", true));
             this.fitnessTxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fitnessTxtBx.Location = new System.Drawing.Point(103, 47);
             this.fitnessTxtBx.Name = "fitnessTxtBx";
@@ -442,7 +370,7 @@
             // 
             // numTxtBx
             // 
-            this.numTxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "Num", true));
+            this.numTxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "Num", true));
             this.numTxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTxtBx.Location = new System.Drawing.Point(103, 82);
             this.numTxtBx.Name = "numTxtBx";
@@ -452,7 +380,7 @@
             // 
             // r1TxtBx
             // 
-            this.r1TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R1", true));
+            this.r1TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R1", true));
             this.r1TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r1TxtBx.Location = new System.Drawing.Point(103, 117);
             this.r1TxtBx.Name = "r1TxtBx";
@@ -462,7 +390,7 @@
             // 
             // r2TxtBx
             // 
-            this.r2TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R2", true));
+            this.r2TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R2", true));
             this.r2TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r2TxtBx.Location = new System.Drawing.Point(103, 152);
             this.r2TxtBx.Name = "r2TxtBx";
@@ -472,7 +400,7 @@
             // 
             // r3TxtBx
             // 
-            this.r3TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R3", true));
+            this.r3TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R3", true));
             this.r3TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r3TxtBx.Location = new System.Drawing.Point(103, 187);
             this.r3TxtBx.Name = "r3TxtBx";
@@ -482,7 +410,7 @@
             // 
             // r4TxtBx
             // 
-            this.r4TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R4", true));
+            this.r4TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R4", true));
             this.r4TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r4TxtBx.Location = new System.Drawing.Point(103, 222);
             this.r4TxtBx.Name = "r4TxtBx";
@@ -492,7 +420,7 @@
             // 
             // r5TxtBx
             // 
-            this.r5TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R5", true));
+            this.r5TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R5", true));
             this.r5TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r5TxtBx.Location = new System.Drawing.Point(103, 257);
             this.r5TxtBx.Name = "r5TxtBx";
@@ -502,7 +430,7 @@
             // 
             // r6TxtBx
             // 
-            this.r6TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R6", true));
+            this.r6TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R6", true));
             this.r6TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r6TxtBx.Location = new System.Drawing.Point(103, 292);
             this.r6TxtBx.Name = "r6TxtBx";
@@ -512,7 +440,7 @@
             // 
             // r7TxtBx
             // 
-            this.r7TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R7", true));
+            this.r7TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R7", true));
             this.r7TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r7TxtBx.Location = new System.Drawing.Point(103, 327);
             this.r7TxtBx.Name = "r7TxtBx";
@@ -522,7 +450,7 @@
             // 
             // r8TxtBx
             // 
-            this.r8TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.individuoBindingSource, "R8", true));
+            this.r8TxtBx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.solucionBindingSource, "R8", true));
             this.r8TxtBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.r8TxtBx.Location = new System.Drawing.Point(103, 362);
             this.r8TxtBx.Name = "r8TxtBx";
@@ -545,7 +473,7 @@
             this.toolStripBtnViewChess});
             this.toolStrip.Location = new System.Drawing.Point(3, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(174, 27);
+            this.toolStrip.Size = new System.Drawing.Size(135, 27);
             this.toolStrip.TabIndex = 0;
             // 
             // toolStripBtnComplete
@@ -609,6 +537,94 @@
             this.toolStripBtnViewChess.Text = "Ver tablero";
             this.toolStripBtnViewChess.Click += new System.EventHandler(this.ToolStripBtnViewChess_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Num";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Num";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 66;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "R1";
+            this.dataGridViewTextBoxColumn2.HeaderText = "R1";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "R2";
+            this.dataGridViewTextBoxColumn3.HeaderText = "R2";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "R3";
+            this.dataGridViewTextBoxColumn4.HeaderText = "R3";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "R4";
+            this.dataGridViewTextBoxColumn5.HeaderText = "R4";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "R5";
+            this.dataGridViewTextBoxColumn6.HeaderText = "R5";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "R6";
+            this.dataGridViewTextBoxColumn7.HeaderText = "R6";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "R7";
+            this.dataGridViewTextBoxColumn8.HeaderText = "R7";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "R8";
+            this.dataGridViewTextBoxColumn9.HeaderText = "R8";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Fitness";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Fitness";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 82;
+            // 
+            // individuoBindingSource
+            // 
+            this.individuoBindingSource.DataSource = typeof(_8_Reinas.Model.Individuo);
+            // 
+            // solucionBindingSource
+            // 
+            this.solucionBindingSource.DataSource = this.individuoBindingSource;
+            // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -635,11 +651,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitCont)).EndInit();
             this.splitCont.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.individuoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).EndInit();
             this.grpBxResult.ResumeLayout(false);
             this.grpBxResult.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.individuoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.solucionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -685,5 +702,6 @@
         protected internal System.Windows.Forms.BindingSource individuoBindingSource;
         protected internal System.Windows.Forms.ToolStripButton toolStripBtnNextIteration;
         protected internal System.Windows.Forms.ToolStripButton toolStripBtnNextStep;
+        private System.Windows.Forms.BindingSource solucionBindingSource;
     }
 }

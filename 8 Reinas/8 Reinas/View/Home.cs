@@ -46,6 +46,8 @@ namespace _8_Reinas.View
             individuoDataGridView.CurrentCell = individuoDataGridView.Rows[mejor].Cells[0];
             individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
 
+            solucionBindingSource.DataSource = individuoBindingSource.Current;
+
             toolStripBtnComplete.Enabled = true;
             toolStripBtnSteps.Enabled = true;
             toolStripBtnViewChess.Enabled = true;
@@ -81,6 +83,8 @@ namespace _8_Reinas.View
                 individuoDataGridView.CurrentCell = individuoDataGridView.Rows[(int)mejor].Cells[0];
                 individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
 
+                solucionBindingSource.DataSource = individuoBindingSource.Current;
+
                 toolStripBtnComplete.Enabled = true;
                 toolStripBtnSteps.Enabled = true;
                 toolStripBtnViewChess.Enabled = true;
@@ -104,6 +108,8 @@ namespace _8_Reinas.View
                 individuoDataGridView.Rows[(int) mejor].Selected = true;
                 individuoDataGridView.CurrentCell = individuoDataGridView.Rows[(int) mejor].Cells[0];
                 individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
+
+                solucionBindingSource.DataSource = individuoBindingSource.Current;
 
                 toolStripBtnComplete.Enabled = true;
                 toolStripBtnSteps.Enabled = true;
