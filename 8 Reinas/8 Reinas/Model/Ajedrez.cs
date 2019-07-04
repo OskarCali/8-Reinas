@@ -90,6 +90,11 @@ namespace _8_Reinas.Model
             //r.Colisiones.Add(colision);
         }
 
+        public void igualar(int num)
+        {
+            _num = num;
+        }
+
         public object Clone()
         {
             return this.MemberwiseClone();
@@ -97,7 +102,7 @@ namespace _8_Reinas.Model
         #endregion
     }
 
-    class Dato
+    public class Dato
     {
         #region Variables
         private int _poblacion;
