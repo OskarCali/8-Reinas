@@ -37,22 +37,22 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpBxDatos = new System.Windows.Forms.GroupBox();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.picBxAbout = new System.Windows.Forms.PictureBox();
             this.iteracionesNumUD = new System.Windows.Forms.NumericUpDown();
             this.poblacionNumUD = new System.Windows.Forms.NumericUpDown();
             this.probCruceNumUD = new System.Windows.Forms.NumericUpDown();
             this.probMutacionNumUD = new System.Windows.Forms.NumericUpDown();
+            this.picBxAbout = new System.Windows.Forms.PictureBox();
             this.datoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             iteracionesLbl = new System.Windows.Forms.Label();
             poblacionLbl = new System.Windows.Forms.Label();
             probCruceLbl = new System.Windows.Forms.Label();
             probMutacionLbl = new System.Windows.Forms.Label();
             this.grpBxDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBxAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionesNumUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poblacionNumUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probCruceNumUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probMutacionNumUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,16 +94,6 @@
             this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "ACEPTAR";
             this.btnEnter.UseVisualStyleBackColor = true;
-            // 
-            // picBxAbout
-            // 
-            this.picBxAbout.Image = global::_8_Reinas.Properties.Resources.Autor;
-            this.picBxAbout.Location = new System.Drawing.Point(9, 278);
-            this.picBxAbout.Name = "picBxAbout";
-            this.picBxAbout.Size = new System.Drawing.Size(40, 55);
-            this.picBxAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBxAbout.TabIndex = 3;
-            this.picBxAbout.TabStop = false;
             // 
             // iteracionesLbl
             // 
@@ -247,6 +237,16 @@
             0,
             131072});
             // 
+            // picBxAbout
+            // 
+            this.picBxAbout.Image = global::_8_Reinas.Properties.Resources.Autor;
+            this.picBxAbout.Location = new System.Drawing.Point(9, 278);
+            this.picBxAbout.Name = "picBxAbout";
+            this.picBxAbout.Size = new System.Drawing.Size(40, 55);
+            this.picBxAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBxAbout.TabIndex = 3;
+            this.picBxAbout.TabStop = false;
+            // 
             // datoBindingSource
             // 
             this.datoBindingSource.DataSource = typeof(_8_Reinas.Model.Dato);
@@ -260,17 +260,18 @@
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.grpBxDatos);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.grpBxDatos.ResumeLayout(false);
             this.grpBxDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBxAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionesNumUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poblacionNumUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.probCruceNumUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.probMutacionNumUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
