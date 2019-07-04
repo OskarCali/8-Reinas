@@ -15,7 +15,9 @@ namespace _8_Reinas.View
     public partial class formHome : Form
     {
         public Dato Dato { get; set; }
-        private int _paso { get; set; }
+        public int Paso { get; set; }
+        public int Iteracion { get; set; }
+
         ControllerFunction controller = new ControllerFunction();
 
         public formHome()
@@ -32,6 +34,7 @@ namespace _8_Reinas.View
 
         private void ToolStripBtnComplete_Click(object sender, EventArgs e)
         {
+            toolStripBtnComplete.Enabled = false;
             toolStripBtnSteps.Enabled = false;
             toolStripBtnNextStep.Enabled = false;
             toolStripBtnNextIteration.Enabled = false;
@@ -43,6 +46,7 @@ namespace _8_Reinas.View
             individuoDataGridView.CurrentCell = individuoDataGridView.Rows[mejor].Cells[0];
             individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
 
+            toolStripBtnComplete.Enabled = true;
             toolStripBtnSteps.Enabled = true;
             toolStripBtnViewChess.Enabled = true;
 
@@ -55,21 +59,61 @@ namespace _8_Reinas.View
         private void ToolStripBtnSteps_Click(object sender, EventArgs e)
         {
             toolStripBtnComplete.Enabled = false;
-            toolStripBtnNextStep.Enabled = true;
-            toolStripBtnNextIteration.Enabled = true;
+            toolStripBtnSteps.Enabled = false;
             toolStripBtnViewChess.Enabled = false;
 
-            _paso = controller.pasos(Dato, this);
+            controller.pasos(Dato, this);
+
+            toolStripBtnNextStep.Enabled = true;
+            toolStripBtnNextIteration.Enabled = true;
         }
 
         private void ToolStripBtnNextStep_Click(object sender, EventArgs e)
         {
+            int? mejor = controller.paso(Dato, this);
 
+            if (mejor != null)
+            {
+                toolStripBtnNextStep.Enabled = false;
+                toolStripBtnNextIteration.Enabled = false;
+
+                individuoDataGridView.Rows[(int)mejor].Selected = true;
+                individuoDataGridView.CurrentCell = individuoDataGridView.Rows[(int)mejor].Cells[0];
+                individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
+
+                toolStripBtnComplete.Enabled = true;
+                toolStripBtnSteps.Enabled = true;
+                toolStripBtnViewChess.Enabled = true;
+
+                MessageBox.Show("El mejor individuo es el: " + (mejor + 1), "SOLUCION", MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
+
+                controller.abrirTablero(this);
+            }
         }
 
         private void ToolStripBtnNextIteration_Click(object sender, EventArgs e)
         {
+            int? mejor = controller.iteracion(Dato, this);
 
+            if (mejor != null)
+            {
+                toolStripBtnNextStep.Enabled = false;
+                toolStripBtnNextIteration.Enabled = false;
+
+                individuoDataGridView.Rows[(int) mejor].Selected = true;
+                individuoDataGridView.CurrentCell = individuoDataGridView.Rows[(int) mejor].Cells[0];
+                individuoDataGridView.FirstDisplayedScrollingRowIndex = individuoDataGridView.SelectedRows[0].Index;
+
+                toolStripBtnComplete.Enabled = true;
+                toolStripBtnSteps.Enabled = true;
+                toolStripBtnViewChess.Enabled = true;
+
+                MessageBox.Show("El mejor individuo es el: " + (mejor + 1), "SOLUCION", MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
+
+                controller.abrirTablero(this);
+            }
         }
 
         private void ToolStripBtnViewChess_Click(object sender, EventArgs e)

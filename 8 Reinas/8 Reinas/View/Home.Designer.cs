@@ -653,8 +653,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnComplete;
         private System.Windows.Forms.ToolStripButton toolStripBtnSteps;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripBtnNextStep;
-        private System.Windows.Forms.ToolStripButton toolStripBtnNextIteration;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripBtnViewChess;
         private System.Windows.Forms.SplitContainer splitCont;
@@ -685,5 +683,7 @@
         protected internal System.Windows.Forms.ToolStripStatusLabel stStripLblStep;
         protected internal System.Windows.Forms.ToolStripProgressBar stStripProgBarStep;
         protected internal System.Windows.Forms.BindingSource individuoBindingSource;
+        protected internal System.Windows.Forms.ToolStripButton toolStripBtnNextIteration;
+        protected internal System.Windows.Forms.ToolStripButton toolStripBtnNextStep;
     }
 }
